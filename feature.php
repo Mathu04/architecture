@@ -1,0 +1,376 @@
+<?php
+include "config/db.php";
+$data = mysqli_query($conn,"SELECT * FROM portfolios ORDER BY id DESC");
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Arkitektur - Portfolio</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/icons/icon-1.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+   
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-3">
+                    <a class="text-body px-2" href="tel:+0123456789"><i class="fa fa-phone-alt text-primary me-2"></i>+012 345 6789</a>
+                    <a class="text-body px-2" href="mailto:info@example.com"><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</a>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-2">
+                    <a class="text-body px-2" href="">Terms</a>
+                    <a class="text-body px-2" href="">Privacy</a>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-sm-square btn-outline-body me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0"><img class="me-3" src="img/icons/icon-1.png" alt="Icon">Arkitektur</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+               <a href="./feature.php" class="nav-item nav-link active">Our Works</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+              <button class="themeToggle btn btn-sm">🌙</button>
+
+       <button
+  class="rtlToggle"
+  class="w-10 h-10 rounded-md text-white font-semibold"
+  style="background-color:white ;"
+>
+          <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+  >
+    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 6h-3.17a15.4 15.4 0 00-1.6-3.56A8.03 8.03 0 0118.93 8zM12 4.07A13.5 13.5 0 0114.44 8H9.56A13.5 13.5 0 0112 4.07zM5.07 8A8.03 8.03 0 019.84 4.44 15.4 15.4 0 008.24 8H5.07zM4.07 10h3.64a17.2 17.2 0 000 4H4.07a7.96 7.96 0 010-4zm1 6h3.17a15.4 15.4 0 001.6 3.56A8.03 8.03 0 015.07 16zM12 19.93A13.5 13.5 0 019.56 16h4.88A13.5 13.5 0 0112 19.93zM18.93 16a8.03 8.03 0 01-4.77 3.56A15.4 15.4 0 0015.76 16h3.17zM19.93 14h-3.64a17.2 17.2 0 000-4h3.64a7.96 7.96 0 010 4z"/>
+  </svg>
+        </button>
+            <a href="./admin/login.php" class="btn btn-primary py-2 px-4  d-lg-block">Login</a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-1 text-white animated slideInDown">Portfolio</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb text-uppercase mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Portfolio</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Feature Start -->
+   <style>
+/* === DARK THEME BASE === */
+body {
+    background: linear-gradient(135deg, #13182f, #020617);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #e5e7eb;
+}
+
+/* === TABLE GLASS CARD === */
+.portfolio-card {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* === TABLE === */
+.table {
+    color: #e5e7eb;
+    border-color: rgba(255,255,255,0.08);
+}
+
+.table thead {
+    background: linear-gradient(90deg, #020617, #020617);
+}
+
+.table th {
+    color: #f9fafb;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: .05em;
+}
+
+.table td {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.table-hover tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+    transition: .3s ease;
+}
+
+/* === IMAGE === */
+.portfolio-img {
+    width: 95px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(0,0,0,.6);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.portfolio-img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 30px rgba(0,0,0,.8);
+}
+
+/* === TEXT === */
+.project-title {
+    font-weight: 600;
+    color: #f9fafb;
+}
+.project-desc {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* === LIGHTBOX === */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn .4s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+    box-shadow: 0 25px 80px rgba(0,0,0,.9);
+    animation: zoomIn .4s ease;
+}
+
+.lightbox span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 42px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+@keyframes zoomIn {
+    from { transform: scale(.85) }
+    to { transform: scale(1) }
+}
+</style>
+
+</head>
+
+<body class="bg-light">
+
+<div class="container py-5">
+    <div class="portfolio-card">
+
+     
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Project Name</th>
+                        <th>Area (sq.ft)</th>
+                        <th>Floors</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php while($row=mysqli_fetch_assoc($data)){ ?>
+                    <tr>
+                        <td>
+                            <img
+                              src="data:image/jpeg;base64,<?= $row['image'] ?>"
+                              class="portfolio-img"
+                              data-full="data:image/jpeg;base64,<?= $row['image'] ?>"
+                            >
+                        </td>
+                        <td>
+                            <div class="project-title"><?= $row['project_name'] ?></div>
+                            <div class="project-desc"><?= $row['description'] ?></div>
+                        </td>
+                        <td><?= $row['build_area'] ?></td>
+                        <td><?= $row['floors'] ?></td>
+                        <td><strong><?= $row['value'] ?></strong></td>
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+    <span onclick="closeLightbox()">&times;</span>
+    <img id="lightboxImg">
+</div>
+
+<script>
+document.querySelectorAll('.portfolio-img').forEach(img => {
+    img.addEventListener('click', () => {
+        document.getElementById('lightboxImg').src = img.dataset.full;
+        document.getElementById('lightbox').style.display = 'flex';
+    });
+});
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+
+    <!-- Feature End -->
+        
+
+    <!-- Footer Start -->
+    <div class="footer-section container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Address</h3>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-body me-1" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Services</h3>
+                    <a class="btn btn-link" href="">Architecture</a>
+                    <a class="btn btn-link" href="">3D Animation</a>
+                    <a class="btn btn-link" href="">House Planning</a>
+                    <a class="btn btn-link" href="">Interior Design</a>
+                    <a class="btn btn-link" href="">Construction</a>
+                </div>
+                 <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Quick Links</h3>
+                    <a class="btn btn-link" href="">Home</a>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Services</a>
+                    <a class="btn btn-link" href="">Portfolio</a>
+                      <a class="btn btn-link" href="./404.html">404 Page</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="text-light mb-4">Newsletter</h3>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                           &copy;<script>document.write(new Date().getFullYear());</script> Arkitektur. All rights reserved 
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <script src="js/themertl.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
