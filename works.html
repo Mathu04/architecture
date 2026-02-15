@@ -3,23 +3,25 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Arkitektur - 404</title>
+    <title>Arkitektur - Architecture  </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
 
     <!-- Favicon -->
- <link href="img/icons/icon-1.png" rel="icon">
+    <link href="img/favicon.ico" rel="icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="img/icons/icon-1.png" rel="icon">
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -33,7 +35,12 @@
 </head>
 
 <body>
-  
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border position-relative text-primary" style="width: 6rem; height: 6rem;" role="status"></div>
+        <img class="position-absolute top-50 start-50 translate-middle" src="img/icons/icon-1.png" alt="Icon">
+    </div>
+    <!-- Spinner End -->
 
 
     <!-- Topbar Start -->
@@ -73,26 +80,27 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.html" class="nav-item nav-link">Home</a>
+                 <a href="index2.html" class="nav-item nav-link ">Home2</a>
                 <a href="about.html" class="nav-item nav-link">About</a>
                 <a href="service.html" class="nav-item nav-link">Services</a>
-<<<<<<< HEAD
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="project.html" class="dropdown-item">Our Projects</a>
-                        <a href="team.html" class="dropdown-item">Team Members</a>
-                        <a href="appointment.html" class="dropdown-item">Appointment</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item active">404 Page</a>
-                    </div>
-                </div>
-
-               <a href="works.html" class="nav-item nav-link">Our works</a>
-
+               <a href="works.html" class="nav-item nav-link active">Our Works</a>
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary py-2 px-4 d-none d-lg-block">Appointment</a>
+             <div class="header-actions">
+  <button class="themeToggle btn btn-sm">🌙</button>
+
+  <button class="rtlToggle btn btn-sm" style="background-color:white;">
+    <svg xmlns="http://www.w3.org/2000/svg"
+      width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm6.93 6h-3.17a15.4 15.4 0 00-1.6-3.56A8.03 8.03 0 0118.93 8zM12 4.07A13.5 13.5 0 0114.44 8H9.56A13.5 13.5 0 0112 4.07zM5.07 8A8.03 8.03 0 019.84 4.44 15.4 15.4 0 008.24 8H5.07zM4.07 10h3.64a17.2 17.2 0 000 4H4.07a7.96 7.96 0 010-4zm1 6h3.17a15.4 15.4 0 001.6 3.56A8.03 8.03 0 015.07 16zM12 19.93A13.5 13.5 0 019.56 16h4.88A13.5 13.5 0 0112 19.93zM18.93 16a8.03 8.03 0 01-4.77 3.56A15.4 15.4 0 0015.76 16h3.17zM19.93 14h-3.64a17.2 17.2 0 000-4h3.64a7.96 7.96 0 010 4z"/>
+    </svg>
+  </button>
+
+  <a href="login.html" class="btn btn-primary py-2 px-4 d-lg-block">
+    Login
+  </a>
+</div>
+           
         </div>
     </nav>
     <!-- Navbar End -->
@@ -101,35 +109,112 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-1 text-white animated slideInDown">404 Error</h1>
+            <h1 class="display-1 text-white animated slideInDown">Our Works</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
                     <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                   
-                    <li class="breadcrumb-item text-primary active" aria-current="page">404 Error</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Our Works</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
+<section class="portfolio-section">
+  <div class="container">
 
-    <!-- 404 Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <i class="bi bi-exclamation-triangle display-1 text-primary"></i>
-                    <h1 class="display-1">404</h1>
-                    <h1 class="mb-4">Page Not Found</h1>
-                    <p class="mb-4">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                    <a class="btn btn-primary py-3 px-5" href="./index.html">Go Back To Home</a>
-                </div>
-            </div>
-        </div>
+    <!-- Section Heading -->
+    <div class="portfolio-header">
+      <span>Our Portfolio</span>
+      <h2>Featured Architectural Works</h2>
+      <p>
+        Explore our thoughtfully designed architectural projects that blend
+        innovation, functionality, and aesthetics.
+      </p>
     </div>
-    <!-- 404 End -->
-        
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item">
+      <div class="portfolio-img">
+        <img src="img/portfolio1.jpg" alt="Luxury Villa">
+      </div>
+      <div class="portfolio-content">
+        <h3>Luxury Residential Villa</h3>
+        <span class="category">Residential Architecture</span>
+
+        <p>
+          This luxury villa project focuses on modern living with open spaces,
+          natural lighting, and sustainable materials. Designed to provide
+          comfort, elegance, and privacy for premium clients.
+        </p>
+
+        <ul class="project-details">
+          <li><strong>Location:</strong> Chennai, India</li>
+          <li><strong>Year:</strong> 2024</li>
+          <li><strong>Area:</strong> 4,500 Sq.ft</li>
+          <li><strong>Client:</strong> Private Residence</li>
+        </ul>
+
+        <a href="#" class="btn-view">View Project</a>
+      </div>
+    </div>
+
+    <!-- Portfolio Item (Reverse) -->
+    <div class="portfolio-item reverse">
+      <div class="portfolio-img">
+        <img src="img/portfolio2.jpg" alt="Commercial Building">
+      </div>
+      <div class="portfolio-content">
+        <h3>Corporate Office Complex</h3>
+        <span class="category">Commercial Architecture</span>
+
+        <p>
+          A contemporary office building designed for productivity and energy
+          efficiency. The structure integrates smart layouts, green terraces,
+          and modern materials.
+        </p>
+
+        <ul class="project-details">
+          <li><strong>Location:</strong> Bangalore, India</li>
+          <li><strong>Year:</strong> 2023</li>
+          <li><strong>Area:</strong> 25,000 Sq.ft</li>
+          <li><strong>Client:</strong> Tech Solutions Pvt Ltd</li>
+        </ul>
+
+        <a href="#" class="btn-view">View Project</a>
+      </div>
+    </div>
+
+    <!-- Portfolio Item -->
+    <div class="portfolio-item">
+      <div class="portfolio-img">
+        <img src="img/portfolio3.jpg" alt="Interior Design">
+      </div>
+      <div class="portfolio-content">
+        <h3>Modern Interior Design</h3>
+        <span class="category">Interior Architecture</span>
+
+        <p>
+          A minimal yet luxurious interior project combining warm textures,
+          functional furniture, and ambient lighting to create an elegant
+          living experience.
+        </p>
+
+        <ul class="project-details">
+          <li><strong>Location:</strong> Coimbatore, India</li>
+          <li><strong>Year:</strong> 2024</li>
+          <li><strong>Area:</strong> 2,000 Sq.ft</li>
+          <li><strong>Client:</strong> Residential Apartment</li>
+        </ul>
+
+        <a href="#" class="btn-view">View Project</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-body footer mt-5 pt-5 px-0 wow fadeIn" data-wow-delay="0.1s">
@@ -147,7 +232,7 @@
                         <a class="btn btn-square btn-outline-body me-0" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-               <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h3 class="text-light mb-4">Services</h3>
                     <a class="btn btn-link" href="">Architecture</a>
                     <a class="btn btn-link" href="">3D Animation</a>
@@ -155,13 +240,13 @@
                     <a class="btn btn-link" href="">Interior Design</a>
                     <a class="btn btn-link" href="">Construction</a>
                 </div>
-                 <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <h3 class="text-light mb-4">Quick Links</h3>
-                    <a class="btn btn-link" href="">Home</a>
                     <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Services</a>
-                    <a class="btn btn-link" href="">Portfolio</a>
-                    <a class="btn btn-link" href="./404.html">404 Page</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-light mb-4">Newsletter</h3>
@@ -177,7 +262,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                              &copy;<script>document.write(new Date().getFullYear());</script> Arkitektur. All rights reserved 
+                       &copy;<script>document.write(new Date().getFullYear());</script> Arkitektur. All rights reserved 
                     </div>
                    
                 </div>
@@ -202,7 +287,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+  <script src="js/themertl.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
