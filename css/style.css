@@ -319,7 +319,42 @@ body {
     }
 }
 
+/* ===== FIX NAVBAR AT 1024px ===== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar .navbar-nav .nav-link {
+        margin-right: 18px;   /* reduce spacing */
+        padding: 20px 0;      /* reduce height */
+        font-size: 14px;      /* prevent wrapping */
+        white-space: nowrap; /* STOP text breaking */
+    }
 
+    .navbar-brand img {
+        max-width: 160px; /* prevent logo pushing menu */
+    }
+}
+/* ===== MOBILE NAVBAR OVERLAY FIX ===== */
+@media (max-width: 991.98px) {
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        z-index: 9999;
+        padding: 15px 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+   
+
+    .navbar .dropdown-menu {
+        position: static;
+        float: none;
+        box-shadow: none;
+        /* background: #f8f9fa; */
+    }
+}
 .header-actions {
   display: flex;
   align-items: center;
@@ -1031,7 +1066,9 @@ navbar {
 [data-theme="dark"] .navbar {
   background-color: var(--nav-bg) !important;
 }
-
+[data-theme="dark"] .navbar-collapse {
+  background-color: var(--nav-bg) !important;
+}
 [data-theme="dark"] .service-box .h4 {
  color: #000;
 }
